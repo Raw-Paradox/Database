@@ -1,8 +1,10 @@
 *
 !*.*
 !*/
+__pycache__
 .vscode
 .idea
 out
 *dSYM
+*o
 

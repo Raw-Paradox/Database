@@ -180,6 +180,7 @@ void print_row(row_t row) {
 }
 
 void print_table(table_t* table) {
+    flush_pages(table->pager);
     page_t* cur_page = read_page(table->pager, table->meta->root_page_num);
     while (cur_page->meta.key_num > 0 && !cur_page->meta.is_leave) {
         cur_page = read_page(table->pager, ((internal_t*)cur_page)->pointers[0]);
